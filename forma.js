@@ -1,5 +1,5 @@
-let button = document.querySelector('button');
-let form = document.querySelector('.formaa');
+let openPopupButtons = document.querySelectorAll('.open_button');
+let form = document.querySelector('.forma');
 let popup = document.querySelector('.popup');
 
 let names = document.getElementById('name');
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   sms.oninput = save;
   checkbox.oninput = save;
 
+  openPopupButtons.forEach((button) => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
     window.onpopstate = function () {
@@ -45,9 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
     form.classList.add('open');
     popup.classList.add('popup_open');
   });
+});
 
   $(function(){
-    $(".formaa").submit(function(e){
+    $(".forma").submit(function(e){
       e.preventDefault();
       var href = $(this).attr("action");
       $.ajax({
