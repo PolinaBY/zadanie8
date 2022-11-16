@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
               }
           },
           error: function (status) {
-            alert('Ошибка!');
+            alert('Ошибка! Попробуйте еще раз!');
           },
       });
     });
