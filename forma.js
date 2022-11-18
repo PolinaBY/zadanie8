@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
     window.onpopstate = function () {
-      window.history.back();
+      window.history.go(-1);
       form.classList.remove('open');
       popup.classList.remove('popup_open');
     };
